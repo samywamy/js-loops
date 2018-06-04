@@ -9,10 +9,16 @@
 // Once he guesses it correctly, end the loop.
 // Hint: What's the difference between a do-while loop and a while loop?
 
+// var randomInt = Math.floor(Math.random() * 10) + 1;
 
+// var userInput = parseInt(prompt("Enter random number, 1 - 10"));
 
-
-
+// while(userInput !== randomInt) {
+// 	alert("Not the number.");
+// 	var userInput = prompt("Enter random number, 1 - 10");
+// } if (userInput == randomInt) {
+// 	alert("You found the number!");	
+// }
 
 
 // Exercise 2: Reversing a String
@@ -20,28 +26,66 @@
 // Write a function that takes a string as an argument and returns its reverse. For example, reverseString("abc defg")
 // should return "gfed cba".
 
+// var myString = "hello"
 
+// function reverseString(myString) {
+// 	var myString = "hello"
+// 	console.log(myString);
+// }
 
+// function reverseString(str) {
+//  var newArray = str.split(""); // [h,e,l,l,o]
+//  var reverseArray = newArray.reverse(); // [o,l,l,e,h]
+//  var combinedArray = reverseArray.join(''); // [olleh]
+//  console.log(combinedArray);
+// }
 
-
-
-
+// reverseString("hello");
 
 // Exercise 3
 // ==========
-var numArray = [3, 9, 2, 5, 3, 6, 7, 4, 8, 1, 4, 10, 21, 43, 56, 23, 54, 94, 94, 0, -2, 4, 2, 7];
-
 // Write functions that each take an array of numbers, e.g. numArray, and...
+
 // 1. return an array with the elements in reverse order, e.g. reverseArray([1,2,3]) should return [3,2,1]
+// var numArray = [3, 9, 2, 5, 3, 6, 7, 4, 8, 1, 4, 10, 21, 43, 56, 23, 54, 94, 94, 0, -2, 4, 2, 7];
+
+// function reverseArray(arr) {
+//  var reverseArray = numArray.reverse();
+//  console.log(reverseArray);
+// }
+
+// reverseArray("hello");
+
 // 2. return an array with each element of the input array multiplied by 2, e.g. double([1,2,3]) should return [2,4,6]
+
+// function doubled (arr) {
+//     var doubled = [];
+//     for (var i = 0; i < arr.length; i++) {
+//         doubled.push(arr[i] * 2);
+//     }
+//     console.log(doubled);
+// }
+
+// doubled([3, 9, 2, 5, 3, 6, 7, 4, 8, 1, 4, 10, 21, 43, 56, 23, 54, 94, 94, 0, -2, 4, 2, 7]);
+
 // 3. return the sum up all the elements of the input array, e.g. sum([1,2,3]) should return 6
+
+var sum = [1, 2, 3].reduce((a, b) => a + b, 0);
+console.log(sum); // 6
+
+// === OR ===
+
+// var sum = [1, 2, 3].reduce(add, 0);
+
+// function add(a, b) {
+//     return a + b;
+// }
+
+// console.log(sum); // 6
+
 // 4. return an array with only odd numbers from the input array, e.g. onlyOdd([1,2,3,4,5]) should return [1,3,5]
-// 5. (Bonus) return an array where each element in this new array is the sum of the element before it and the element in its current position in the old array, e.g. the first few elements in this new array would be `[3, 12, 11, 7, 8, ...]`
-
-
-
-
-
+// 5. (Bonus) return an array where each element in this new array is the sum of the element before it and the element in its
+// current position in the old array, e.g. the first few elements in this new array would be `[3, 12, 11, 7, 8, ...]`
 
 
 // Exercise 4
